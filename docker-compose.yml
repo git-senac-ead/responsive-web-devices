@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  senac_service:
+    container_name: container_senac
+    image: jnlucas/image-phpmysql:latest
+    volumes:
+      - ./:/var/www/html
+
+    working_dir: /var/www/html/
+    ports:
+      - "9990:80"
